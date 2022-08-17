@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+hellow
+
+<div id="alert-box">
+
+</div>
+
+<div id="image-box">
+</div>
+
+<form action="" id="image-form">
+    {% csrf_token %}
+    {{form.as_p}}
+</form>
+
+<button id="confirm-btn" class="not-visible">confirm</button>
+
+{% endblock content %}
+
+
+
+{% block js %}
+<script src="{% static 'js/cropper/main.js' %}"></script>
+{% endblock js %}
