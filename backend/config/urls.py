@@ -18,12 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from post.views import HomeView
+from post.views import PostList
 from images.views import main_view 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main_view),
+    path('', PostList),
+    
 
 ]
 
